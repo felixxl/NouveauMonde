@@ -1,0 +1,44 @@
+@import "../../common/variables";
+
+.background {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big {
+    height: 45px;
+    width: 45px;
+}
+
+.medium {
+    height: 26px;
+    width: 26px;
+}
+
+.small {
+    height: 22px;
+    width: 22px;
+}
+
+.thumbBig {
+    height: 16px;
+    width: 16px;
+}
+
+.thumbMedium {
+    height: 12px;
+    width: 12px;
+}
+
+.thumbSmall {
+    height: 10px;
+    width: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}

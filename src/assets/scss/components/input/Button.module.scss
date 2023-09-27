@@ -1,0 +1,67 @@
+@import '../../common/_variables'; 
+
+.btn {
+    color: $white;
+    background: no-repeat center $primary;
+    padding: 8px 10px;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 2rem;
+    border: none;
+    transition: all .3s;
+    will-change: background-color, color;
+    cursor: pointer;
+
+    svg path {
+        fill: $secondary;
+        transition: all .3s;
+        will-change: fill;
+    }
+
+    img {
+        max-width: 16px;
+        max-height: 16px;
+    }
+
+    &.createLinkButton {
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 14px;
+
+        svg {
+            margin-top: 5px;
+            width: 15px;
+        }
+
+        &:hover {
+            width: 170px;
+            justify-content: center;
+            transition: 0.3s;
+            padding-right: 10px;
+
+            &::before {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 170px;
+                content: attr(data-before-content);
+                font-size: 13px;
+                font-family: Poppins, sans-serif;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    &:hover {
+        background: $secondary;
+        
+
+        svg path {
+            fill: $secondary;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+$primary: #2B475E ;
+$secondary: #92cca8;
+$unvalid: #f3481d;
+$success: #58CBB9;
+$rose: #F482B2;
+$blue: #A6D8DE;
+$white: #FFFFFF;
+$black: #000000;
+$grey: #CCDDDE;
+
+$font-regular: 200;
+$font-medium: 400;
+$font-semiBold: 600;
+$font-bold: 900;
+
+@mixin colors-associations {
+  color: $white;
+
+  &.secondary {
+    color: $secondary;
+    background-color: $background-orange;
+  }
+  &.primary {
+    background-color: $primary;
+  }
+  &.rose {
+    background-color: $rose;
+  }
+  &.blue {
+    background-color: $blue;
+  }
+  &.black {
+    background-color: $black;
+  }
+  &.genetique {
+    background-color: $genetique;
+  }
+  &.bien-etre {
+    background-color: $separation;
+  }
+  &.prevention {
+    background-color: $prevention;
+  }
+  &.maladie {
+    background-color: $maladie;
+  }
+  &.woman {
+    background-color: $woman;
+  }
+  &.man {
+    background-color: $man;
+  }
+}

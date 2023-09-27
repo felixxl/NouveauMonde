@@ -1,0 +1,11 @@
+@import '../../common/_variables'; 
+
+.footer {
+  background-color: $primary;
+  padding: 20px 0;
+  text-align: center;
+
+  .footer-text {
+    color: #999;
+  }
+}

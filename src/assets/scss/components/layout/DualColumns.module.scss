@@ -1,0 +1,95 @@
+
+@import "../../common/variables";
+
+.columns {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to top, $stabiloDefault 85%, $secondary 85%);
+
+    &.white {
+        background: linear-gradient(to top, $white 85%, $secondary 85%);
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .blocs {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .left {
+            z-index: 1;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding-top: 60px;
+            background-color: $secondary;
+            width: 100vw;
+            text-align: center;
+        }
+
+        .right {
+            align-items: center;
+            justify-content: flex-end;
+            display: flex;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (min-width: 550px) {
+    .blocs {
+        .left {
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 760px) {
+    .columns {
+        background: linear-gradient(to left, $stabiloDefault 50%, $secondary 50%);
+
+        &.white {
+            background: linear-gradient(to left, $white 50%, $secondary 50%);
+        }
+
+        h3 {
+            position: relative;
+            // left: 10vh; the line destroys a lot of things I do not understand its interest
+            text-align: left;
+            font-size: 38px;
+        }
+
+        .blocs {
+            flex-direction: row;
+            width: 100%;
+
+            .left {
+                width: 50%;
+                position: relative;
+                padding-top: 0;
+                justify-content: flex-start;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: -18px;
+                    width: 0;
+                    height: 0;
+                    border-top: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    border-left: 20px solid $secondary;
+                }
+            }
+
+            .right {
+                margin-top: 100px;
+                width: 50%;
+            }
+        }
+    }
+}
