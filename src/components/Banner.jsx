@@ -1,17 +1,23 @@
 import React from 'react';
-import styles from "../assets/scss/components/Banner.module.scss"
+import styles from "../assets/scss/components/Banner.module.scss";
 
-const Banner = ({ content, onClick, className, type='button', form = '', beforeContent = null}) => (
-
-  <button
-    form={form}
-    type={type}
-    onClick={onClick}
-    className={`${styles.btn} ${className} ${beforeContent && styles.createLinkButton}`}
-    data-before-content={beforeContent}
-  >
-    {content}
-  </button>
-);
+const Banner = ({ title, content}) => {
+  return (
+    <div
+      className={styles.banner}
+    >
+      <div className={styles.contentBloc}>
+        <h1>
+          {title.split('').map((letter, index) => (
+            <span key={index} style={{ animationDelay: `${index * 0.1}s` }}>
+              {letter}
+            </span>
+          ))}
+        </h1>
+        {content && <p>{content}</p>}
+      </div>
+    </div>
+  );
+}
 
 export default Banner;

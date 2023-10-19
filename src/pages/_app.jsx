@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import Loading from '../components/Loading';
-import Menu from '../components/Menu';
 import { RecoilRoot } from 'recoil'; 
 import '../assets/scss/main.scss'
 

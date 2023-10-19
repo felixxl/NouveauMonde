@@ -1,0 +1,30 @@
+@import "../common/variables";
+
+.stabilo {
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        background-color: $stabiloDefault;
+        bottom: 0;
+        width: 100%;
+        border-radius: 20px;
+        height: .8em;
+        z-index: -1;
+    }
+
+    &.blue::before {
+        background-color: $blue;
+    }
+    &.secondary::before {
+        background-color: $secondary; 
+    }
+    &.white::before {
+        background-color: $white;
+    }
+    &.separation::before {
+        background-color: $separation;
+    }
+}

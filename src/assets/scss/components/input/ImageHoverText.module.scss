@@ -1,0 +1,150 @@
+@import "../common/variables";
+
+.faq {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 156px;
+    width: 146px;
+    border-radius: 42px;
+    margin: 10px 0;
+
+    img {
+        position: absolute;
+        height: 100%;
+    }
+
+    .hover {
+        position: absolute;
+        height: 210px;
+        width: 195px;
+        transition: all .3s;
+    }
+
+    .blocContent {
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            color: $white;
+            text-align: center;
+            z-index: 2;
+            font-size: 12px;
+            text-transform: uppercase;
+            transition: all .2s;
+            font-family: Poppins, sans-serif;
+
+            span {
+                background-color: red;
+                border-radius: 10px;
+                padding: 0 10px;
+                transition: all .2s;
+
+                &.white {
+                    color: $black;
+                    background-color: $white;
+                }
+                &.orange {
+                    background-color: $orangeFaq;
+                }
+                &.blue {
+                    background-color: $blueFaq;
+                }
+                &.green {
+                    background-color: $primary;
+                }
+                &.pink {
+                    background-color: $rose;
+                }
+            }
+        }
+
+        .paragraph {
+            opacity: 0;
+            height: 100px;
+            margin-bottom: -100px;
+            margin-top: 0;
+            font-size: 10px;
+            text-align: center;
+            width: 180px;
+            font-family: Poppins, sans-serif;
+            font-weight: $font-regular;
+            color: $primary;
+            transition: all .2s;
+            visibility: hidden;
+
+            &.green {
+                color: $white;
+            }
+        }
+    }
+
+    &:hover {
+        .hover {
+            transition: all .3s;
+
+            &.white {
+                background-color: $white;
+            }
+            &.orange {
+                background-color: $orangeFaq;
+            }
+            &.blue {
+                background-color: $blueFaq;
+            }
+            &.pink {
+                background-color: $rose;
+            }
+            &.green {
+                background-color: $primary;
+            }
+        }
+
+        .blocContent {
+            h2 {
+                font-size: 12px;
+                transition: all .3s;
+                width: 100%;
+                text-align: center;
+            }
+
+            .paragraph {
+                opacity: 1;
+                visibility: visible;
+                margin-bottom: 0;
+                transition: opacity .5s .2s;
+            }
+        }
+    }
+}
+
+// responsive
+@media (min-width: 830px) {
+    .faq {
+        height: 210px;
+        width: 195px;
+        border-radius: 62px;
+
+        .blocContent {
+            h2 {
+                font-size: 14px !important;
+            }
+        }
+
+        &:hover {
+            .blocContent {
+                h2 {
+                    margin-top: -20px;
+                }
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

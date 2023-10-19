@@ -1,7 +1,8 @@
 $primary: #2B475E ;
 $secondary: #92cca8;
+$tres: #97bbd8 ;
 $unvalid: #f3481d;
-$success: #58CBB9;
+$success: #d0f4dd;
 $rose: #F482B2;
 $blue: #A6D8DE;
 $white: #FFFFFF;
@@ -12,6 +13,8 @@ $font-regular: 200;
 $font-medium: 400;
 $font-semiBold: 600;
 $font-bold: 900;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 @mixin colors-associations {
   color: $white;

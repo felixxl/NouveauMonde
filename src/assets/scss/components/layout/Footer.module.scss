@@ -1,11 +1,35 @@
-@import '../../common/_variables'; 
+@import '../../common/_variables';
 
 .footer {
   background-color: $primary;
-  padding: 20px 0;
+  padding: 40px 0;
   text-align: center;
 
-  .footer-text {
-    color: #999;
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .footerContent {
+      flex: 1;
+      max-width: 60%;
+    }
+
+    .additionalContent {
+      flex: 1;
+      max-width: 40%;
+
+      .socialIcons {
+        display: flex;
+        gap: 10px;
+
+      }
+    }
   }
+  .footertext {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color : $white ;
+    text-decoration: none;
+    }
 }

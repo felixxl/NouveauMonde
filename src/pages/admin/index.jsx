@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Button from '../../components/input/Button';
 import CreateUser from '../../components/admin/Users/CreateUser';
 import RegisterUser from '../../components/admin/Users/RegisterUser';
 import Dashboard from '../../components/admin/Dashboard';
@@ -31,8 +32,8 @@ export default function Back() {
         </>
       ) : (
         <div>
-          <button onClick={() => setTab('register')}>Register</button>
-          <button onClick={() => setTab('inscription')}>Inscription</button>
+          <Button onClick={() => setTab('register')} content='Register'/>
+          <Button onClick={() => setTab('inscription')} content='Inscription'/>
           {tab === 'register' ? <RegisterUser onLogin={handleLogin} /> : null}
           {tab === 'inscription' ? <CreateUser onLogin={handleLogin} /> : null}
         </div>

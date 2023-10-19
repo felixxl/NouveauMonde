@@ -1,0 +1,72 @@
+@import "../common/variables";
+
+.blocContent {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+
+        h3 {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Roboto', sans-serif;  
+            margin-top : 10px ;
+            color : $primary ;
+            span {
+                position: relative;
+            }
+
+            .soulignement:before {
+                content: " ";
+                display: inline-block;
+                position: absolute;
+                background-color: #FFDED0;
+                top: 1rem;
+                width: 100%;
+                border-radius: 20px;
+                height: .8em;
+                z-index: -1;
+            }
+        }
+
+        p {
+            padding-top: 10px;
+            font-family: 'Roboto', sans-serif;  
+            color: $primary;
+            margin: 0;
+        }
+    }
+
+    img {
+        width: 100%;
+        border-radius: 30px;
+    }
+}
+
+// responsive
+@media (min-width: 650px) {
+    .blocContent {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse !important;
+        }
+
+        .content {
+            width: 50%;
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+}
