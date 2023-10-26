@@ -15,82 +15,28 @@ $hexHeight: 1.232 * $hexSize; // sqrt(3) * side length
   justify-content: space-between;
 }
 
-.hexRow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-bottom: 100px;
-  
-
-  &:nth-child(even) {
-    margin-left: $hexSize / 2;
-  }
-}
-
-.hex {
-  flex: 0 0 calc(33.33% - 20px); // ajustez la marge selon vos besoins
-  margin: 10px;
-  width: $hexSize;
-  height: $hexHeight;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  background-position: center center;
-  background-size: cover;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  transition: background 0.3s ease-in-out;
-
-  &:hover .hexTitle {
-      opacity: 0;
-  }
-
-  .hexTitle {
-      position: absolute;
-      font-family: 'Playpen Sans', cursive, sans-serif;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      color: $white;
-      text-align: center;
-      font-size: 3em;
-      transition: opacity 0.3s ease-in-out;
-      text-shadow:
-      -1px -1px 0 $primary,
-      1px -1px 0 $primary,
-      -1px 1px 0 $primary,
-      1px 1px 0 $primary;
-  }
-}
-
-.decorativeTitle {
-  position: relative;
-  display: inline-block;
-  color : $primary ;
+.link, .fbLink {
+  color: $primary;
+  text-decoration: underline;
   font-family: 'Playpen Sans', cursive, sans-serif;
-  font-size: 2em;
+  margin-top: 1rem;
+  font-size : 1.25rem;
+  display: block;
+
+  &:hover {
+    color: $secondary;
+  }
 }
 
-.decorativeTitle::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: $primary;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease-in-out;
-}
-
-.decorativeTitle:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+.divingClub {
+  margin-top: 2rem;
+  border-top: 1px solid $primary;
+  font-family: 'Playpen Sans', cursive, sans-serif;
+  padding-top: 1rem;
+  font-size : 1.25rem;
 }
 
 .blocCommunaute, .blocCommunauteV2 {
-  position: relative;
   background-color: $white;
   padding: 20px;
   margin: 20px;
@@ -118,7 +64,7 @@ $hexHeight: 1.232 * $hexSize; // sqrt(3) * side length
 
   h2 {
     color: $primary;
-    font-family: 'Playpen Sans', cursive, sans-serif; 
+    font-family: 'Playpen Sans', cursive, sans-serif;
     margin-bottom: 10px;
     border-bottom: 3px solid $secondary;    
     text-decoration:none
@@ -129,25 +75,9 @@ $hexHeight: 1.232 * $hexSize; // sqrt(3) * side length
     text-decoration:none
   }
 }
-.separ {
-  margin: 7vh;
-  margin-top : 10vh ;
-}
 
-.blocCommunauteV2 {
-  margin-top : 50px;
-  border-color : $secondary ;
-  border-radius: 10px;
-}
-
-.titleMain {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: $primary;
-}
-
-.top {
-  margin-top: -50px;
+.bottop {
+  margin: 5rem 0;
 }
 
 @media (min-width: 768px) {

@@ -24,7 +24,7 @@ const Header = () => {
             <Link href="/unAutreMonde">Un Autre Monde</Link>
           </li>
           <li className={styles.menuitem}>
-            <Link href="/laCazeAVinCe">La Caze à VinCe</Link>
+            <Link href="/laKaZAVinCe">La Kaz à VinCe</Link>
           </li>
           <li className={styles.menuitem}>
             <Link href="/acceuilHandicap">Accueil Handicap</Link>

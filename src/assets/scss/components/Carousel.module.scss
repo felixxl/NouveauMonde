@@ -4,7 +4,7 @@
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  // width: 100%;
   max-height: 100%; // vous pouvez ajuster cette valeur selon vos besoins
 
   .carouselItem {
@@ -22,7 +22,7 @@
 
     .carouselDescription {
       position: absolute;
-      font-family: 'Roboto', sans-serif;  
+      font-family: 'Playpen Sans', cursive, sans-serif; 
       bottom: 10px;
       left: 10px;
       color: white;

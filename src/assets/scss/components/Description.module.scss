@@ -2,7 +2,19 @@
 
 
 .description {
-  font-size: 16px;
+  font-size: 1.5rem;
+  font-family: 'Playpen Sans', cursive, sans-serif;
   color: #555;
   margin-bottom: 20px;
+    p {
+      margin-bottom: 8px; // Ajoute un espacement de 5px en bas de chaque paragraphe
+
+      &:last-child {
+          margin-bottom: 0; // Assurez-vous que le dernier paragraphe n'a pas d'espacement en bas
+      }
+  }
+}
+
+.highlighted {
+  background-color: $secondary; // Ou toute autre couleur de surlignement que vous préférez
 }

@@ -17,7 +17,7 @@
             position: relative;
             display: flex;
             flex-wrap: wrap;
-            font-family: 'Roboto', sans-serif;  
+            font-family: 'Playpen Sans', cursive, sans-serif;
             margin-top : 10px ;
             color : $primary ;
             span {
@@ -39,7 +39,7 @@
 
         p {
             padding-top: 10px;
-            font-family: 'Roboto', sans-serif;  
+            font-family: 'Playpen Sans', cursive, sans-serif;
             color: $primary;
             margin: 0;
         }
@@ -67,6 +67,17 @@
 
         img {
             width: 40%;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .content {
+        h3 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1.2rem;
         }
     }
 }

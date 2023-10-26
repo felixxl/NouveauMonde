@@ -26,7 +26,7 @@
     &.createLinkButton {
         width: 40px;
         height: 40px;
-        font-size: 26px;
+        font-size: 1.6rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -49,8 +49,8 @@
                 justify-content: center;
                 width: 170px;
                 content: attr(data-before-content);
-                font-size: 13px;
-                font-family: Poppins, sans-serif;
+                font-size: 1.5rem;
+                font-family: 'Playpen Sans', cursive, sans-serif;
                 margin-top: 5px;
             }
         }
