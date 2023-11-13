@@ -7,14 +7,14 @@
   color: #555;
   margin-bottom: 20px;
     p {
-      margin-bottom: 8px; // Ajoute un espacement de 5px en bas de chaque paragraphe
+      margin-bottom: 8px; 
 
-      &:last-child {
-          margin-bottom: 0; // Assurez-vous que le dernier paragraphe n'a pas d'espacement en bas
-      }
+    &:last-child {
+      margin-bottom: 0; 
+    }
   }
 }
 
 .highlighted {
-  background-color: $secondary; // Ou toute autre couleur de surlignement que vous préférez
+  background-color: $secondary; 
 }
