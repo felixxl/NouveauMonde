@@ -35,26 +35,27 @@ const Home = () => {
       <Head>
         <title>Location de Gîte en Guadeloupe - Un autre monde</title>
         <meta name="description" content="Découvrez nos locations de gîte, chalet, maison et chambres en Guadeloupe. Profitez d'un logement de qualité à Un autre monde. Réservation en ligne disponible. Activité bien être, yoga, aéroboxe, aquagym, peinture, pilates, relaxation, taichi, yoga " charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <html lang="fr" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/logo.png" />
         <script type="application/ld+json">
-      {`
-        {
-            "@context": "http://schema.org",
-            "@type": "LodgingBusiness",
-            "name": "Un autre monde",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "123 rue de la plage",
-                "addressLocality": "Basse-Terre",
-                "addressRegion": "Guadeloupe",
-                "postalCode": "97100"
-            },
-            "telephone": "+590 1234 5678",
-            "description": "Découvrez nos locations de gîte, chalet, maison et chambres en Guadeloupe.",
-        }
-      `}
-    </script>
+          {`
+            {
+                "@context": "http://schema.org",
+                "@type": "LodgingBusiness",
+                "name": "Un autre monde",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "123 rue de la plage",
+                    "addressLocality": "Basse-Terre",
+                    "addressRegion": "Guadeloupe",
+                    "postalCode": "97100"
+                },
+                "telephone": "+590 1234 5678",
+                "description": "Découvrez nos locations de gîte, chalet, maison et chambres en Guadeloupe.",
+            }
+          `}
+        </script>
       </Head>
 
       <main className={styles.background}>
@@ -93,8 +94,8 @@ const Home = () => {
             />
 
             <CustomContentModule
-              title="Vous accueille dans leur univers extraterrestre... et aquatique..."Ò
-              url2x="/images/swiming.jpg"
+              title="Vous accueille dans leur univers extraterrestre... et aquatique..."
+              url="/images/swiming.jpg"
               alt="Un univers unique et magnifique au milieu de la guadeloupe"
             />
 
@@ -108,14 +109,14 @@ const Home = () => {
             <CustomContentModule
               title="Isis"
               content="Intrépide et chasseuse, c'est la petite dernière."
-              url2x="/images/chat.jpg"
+              url="/images/chat.jpg"
               alt="chat en guadeloupe"
             />
 
             <CustomContentModule
               title="Isidore"
               content="La doyenne et gardienne, c'est un vrai chat de garde."
-              url2x="/images/chat.png"
+              url="/images/chat.png"
               alt="chat"
             />
           </div>

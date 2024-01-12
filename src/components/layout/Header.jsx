@@ -32,9 +32,6 @@ const Header = () => {
           <li className={styles.menuitem}>
             <Link href="https://sheherasade.fr/" target="_blank" rel="noopener noreferrer">Shehérasade</Link>
           </li>
-          {/* <li className={styles.menuitem}>
-            <Link href="/admin">Admin</Link>
-          </li> */}
         </ul>
       </div>
     </header>

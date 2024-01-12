@@ -1,0 +1,51 @@
+/* ActiviteImage.module.scss */
+
+@import '../common/_variables'; 
+
+.background {
+  background-color: $primary;
+}
+
+.mainContent {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.activiteContainer {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 600px; 
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.activiteImage {
+  max-width: 100%;
+  height: auto;
+  border: 6px solid $white; 
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .mainContent {
+    padding: 30px;
+  }
+
+  .titleMain {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    min-height: 83vh;
+  }
+}

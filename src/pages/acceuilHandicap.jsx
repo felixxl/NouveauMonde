@@ -1,15 +1,14 @@
 import React from 'react';
+import Head from 'next/head';
 import Banner from '../components/Banner';
 import BackToTopButton from '../components/input/BackToTop';
-import CustomContentModule from '../components/input/CustomContentModule';
 import Description from '../components/Description';
-import Sleep from '../components/Sleep';
 import SleepInverse from '../components/SleepInverse';  
 import styles from '../assets/scss/pages/acceuilHandicap.module.scss';
 
 const Acceuilhandicape = () => {
   
-  const sleepTitle = "La chambre Corossol :" ;
+  const sleepTitle = "La chambre Corossol" ;
   const sleepDescription = "Chambre indépendante de 19,20 m² Vue mer et montagne équipée d'une Salle d'eau privative (douche à l'italienne, WC), d'un bureau, terrasse privative de 8,60 m² et petit balcon privatif, accès piscine à partir de la chambre. Cette chambre donne également accès par un balcon à une autre chambre de 11,50m2 (idéal pour une petite famille)";
   const sleepImages = [
     "/images/ChambreLit1.jpg",
@@ -28,7 +27,7 @@ const Acceuilhandicape = () => {
     "/images/chambrevert5.jpg"
   ];
   const sleepTitle3 = "Chambre Sapotille";
-  const sleepDescription3 = "- Avec la chambre Sapotille de 11,50m² accessible par un balcon commun (idéal pour une petite famille). Cette dernière ne peut se louer seule. ";
+  const sleepDescription3 = "Avec la chambre Sapotille de 11,50m² accessible par un balcon commun (idéal pour une petite famille). Cette dernière ne peut se louer seule. ";
   const sleepImages3 = [
     "/images/Sapotille1.jpg",
     "/images/Sapotille2.jpg",
@@ -36,9 +35,41 @@ const Acceuilhandicape = () => {
     "/images/Sapotille4.jpg",
     "/images/Sapotille5.jpg"
   ];
+  const sleepAlts = [
+    "Lit confortable dans la chambre Corossol avec vue sur la mer",
+    "Vue pittoresque depuis la chambre Corossol",
+    "Couchage supplémentaire confortable dans la chambre Corossol",
+    "Entrée accueillante de la chambre Corossol",
+    "Salle de bain moderne avec douche à l'italienne dans la chambre Corossol"
+  ];
 
   return (
     <div className={styles.background}>
+      <Head>
+        <title>Acceuil handicap- Guadeloup</title>
+        <meta name="description" content="Lieu d'acceuil pour personne ne situation d'handicape au milieu de la guadeloup. Adapter pour tous" charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <html lang="fr" />
+        <link rel="icon" href="/images/logo.png" />
+        <script type="application/ld+json">
+          {`
+            {
+                "@context": "http://schema.org",
+                "@type": "LodgingBusiness",
+                "name": "Un autre monde",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "123 rue de la plage",
+                    "addressLocality": "Basse-Terre",
+                    "addressRegion": "Guadeloupe",
+                    "postalCode": "97100"
+                },
+                "telephone": "+590 1234 5678",
+                "description": "Découvrez nos locations de gîte, chalet, maison et chambres en Guadeloupe.",
+            }
+          `}
+        </script>
+      </Head>
       <Banner 
         title="Accueil&nbsp;Handicap"
         content="Chambres d'hôtes adaptées aux normes PMR"
@@ -58,18 +89,23 @@ const Acceuilhandicape = () => {
         />
         </div>
         <div className={styles.space}>    
-          <Sleep title={sleepTitle} description={sleepDescription} images={sleepImages} />
+          <SleepInverse title={sleepTitle} description={sleepDescription} images={sleepImages} alts={sleepAlts}/>
           <div className={styles.space}/>
-          <SleepInverse title={sleepTitle2} description={sleepDescription2} images={sleepImages2} />
+          <SleepInverse title={sleepTitle2} description={sleepDescription2} images={sleepImages2} alts={sleepAlts}/>
           <div className={styles.space}/>
-          <Sleep title={sleepTitle3} description={sleepDescription3} images={sleepImages3} />
+          <SleepInverse title={sleepTitle3} description={sleepDescription3} images={sleepImages3} alts={sleepAlts}/>
         </div>
         <div className={styles.blocCommunaute}>
           <Description 
             texts={[
-              "Activités collectives disponibles sur place en supplément : yoga, aquagym dynamique, taï-chi, relaxation dynamique, aéroboxe, pilate",
-              "Bien-être : massages",
+              "---------",
+              "Activités collectives disponibles sur place en supplément :",
+              "yoga, aquagym dynamique, taï-chi, relaxation dynamique, aéroboxe, pilate",
+              "---------",
+              "Bien-être : ",
+              "massages",
               "Soins énergétiques",
+              "---------",
               "Pour ceux qui souhaitent simplement se détendre, la piscine, adaptée et accessible, est l'endroit idéal pour se rafraîchir sous le soleil tropical.",
               "L'engagement de La KaZ à VinCe envers ses visiteurs se manifeste non seulement à travers ses installations, mais aussi grâce à son personnel dévoué, formé spécifiquement pour accompagner les personnes en situation de handicap.",
               "Chaque hôte est reçu avec une chaleur et une prévenance qui font la fierté de cette maison. La KaZ à VinCe n'est pas seulement une destination, mais une expérience, une ode à la beauté de la Guadeloupe et à l'inclusion. Un lieu où le temps semble s'arrêter, et où chaque moment est une célébration de la diversité et de la splendeur de la vie.",

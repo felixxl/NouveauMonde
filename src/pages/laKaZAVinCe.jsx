@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../components/Banner';
+import Head from 'next/head';
 import BackToTopButton from '../components/input/BackToTop';
 import Description from '../components/Description';
 import Temoinage from '../components/temoinage';
@@ -10,13 +11,40 @@ const temoinageData = [
   { 
     text: "J'ai vécu une expérience incroyable et enrichissante dans un cadre magnifique.", 
     author: 'Manon Redureau', 
-    imageUrl: '/images/ChambreDouche1.jpg' 
+    imageUrl: '/images/ChambreDouche1.jpg',
+    alt: 'Avis de Manon Redureau'
   },
 ];
 
 const laKaZAVinCe = () => {
   return (
     <div className={styles.background}>
+      <Head>
+        <title>LaKaZAVince hebergement location magnifique - Guadeloup</title>
+        <meta name="description" content="Location au milieu de la Guadeloup, magnifique panorama et chambre charmante, petit déjeuner possible." charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <html lang="fr" />
+        <link rel="icon" href="/images/logo.png" />
+        <script type="application/ld+json">
+          {`
+            {
+                "@context": "http://schema.org",
+                "@type": "LodgingBusiness",
+                "name": "Un autre monde",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "123 rue de la plage",
+                    "addressLocality": "Basse-Terre",
+                    "addressRegion": "Guadeloupe",
+                    "postalCode": "97100"
+                },
+                "telephone": "+590 1234 5678",
+                "description": "Découvrez nos locations de gîte, chalet, maison et chambres en Guadeloupe.",
+            }
+          `}
+        </script>
+      </Head>
+
       <Banner 
         title="La&nbsp;KaZ&nbsp;à&nbsp;VinCe"
         content="Chambres d'hôtes dans un cadre idyllique"
